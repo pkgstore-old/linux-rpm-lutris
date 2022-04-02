@@ -11,7 +11,7 @@ URL:                            http://%{name}.net
 Source0:                        %{name}-%{version}.tar.xz
 
 # Remove dependency on python-magic as it causes problems atm.
-Patch0:                         removing-python-magic-dep.patch
+# Patch0:                       removing-python-magic-dep.patch
 
 BuildRequires:                  desktop-file-utils
 BuildRequires:                  python3-devel

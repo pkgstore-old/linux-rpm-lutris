@@ -23,6 +23,7 @@ Requires:                       python3-dbus, python3-evdev, python3-gobject, py
 Requires:                       gtk3, psmisc, xorg-x11-server-Xephyr, xrandr
 Requires:                       hicolor-icon-theme
 Requires:                       gnome-desktop3
+Requires:                       python3-distro
 
 %ifarch x86_64
 Requires:                       mesa-dri-drivers(x86-32)
@@ -30,6 +31,7 @@ Requires:                       mesa-vulkan-drivers(x86-32)
 Requires:                       vulkan-loader(x86-32)
 Requires:                       mesa-libGL(x86-32)
 Recommends:                     pipewire(x86-32)
+Recommends:                     wine-pulseaudio(x86-32)
 Recommends:                     wine-core(x86-32)
 %endif
 
@@ -97,8 +99,11 @@ desktop-file-install --dir=%{buildroot}%{_datadir}/applications share/applicatio
 - UPD: Rebuild by Package Store.
 - UPD: File "lutris.spec".
 
-* Thu Jan 20 2022 Fedora Release Engineering <releng@fedoraproject.org> - 0.5.9.1-3
-- Rebuilt for https://fedoraproject.org/wiki/Fedora_36_Mass_Rebuild
+* Thu Feb 24 2022 Steve Cossette <farchord@gmail.com> - 0.5.9.1-4
+- Add python3-distro dependancy (for usage with the system info feature in lutris)
+
+* Thu Nov 04 2021 Christopher King <bunnyapocalypse@protonmail.com> - 0.5.9.1-3
+- Add 32 bit wine pulseaudio support
 
 * Wed Oct 20 2021 Christopher King <bunnyapocalypse@protonmail.com> - 0.5.9.1-2
 - Add 32 bit pipewire as requirement
